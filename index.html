@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ================= META CONFIGURATION ================= -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AURA ATELIER - Contemporary Luxury Clothing & Sustainable Ready-to-Wear Apparel.">
+  <title>AURA ATELIER | Contemporary Luxury Apparel</title>
+
+  <!-- Google Fonts: Playfair Display (Serif Elegance) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ================= SECTION: ANNOUNCEMENT BAR ================= -->
+  <!-- Component: Top Notification Banner for promotions, free shipping, and notices -->
+  <aside class="announcement-bar" id="announcementBar">
+    <div class="announcement-container">
+      <p class="announcement-text">
+        <span class="announcement-tag">Exclusive</span> Complimentary Worldwide Shipping on Orders Over $150 &nbsp;•&nbsp; Code: <strong>AURA10</strong> for 10% Off
+      </p>
+      <div class="announcement-actions">
+        <span class="currency-badge">USD ($)</span>
+      </div>
+    </div>
+  </aside>
+  <!-- ================= END ANNOUNCEMENT BAR ================= -->
+
+
+  <!-- ================= SECTION: PRIMARY HEADER & NAVIGATION ================= -->
+  <!-- Component: Sticky Site Header with Brand Identity, Navigation Links, and Action Utilities -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+
+      <!-- Sub-Component: Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="Aura Atelier Home">
+        <span class="logo-symbol">✦</span>
+        <span class="logo-text">AURA <span class="logo-subtext">ATELIER</span></span>
+      </a>
+
+      <!-- Sub-Component: Desktop Navigation Menu (Mapped dynamically from NAV_ITEMS in constant.js) -->
+      <nav class="main-navigation" id="mainNavigation" aria-label="Main Navigation">
+        <ul class="nav-list" id="navList">
+          <!-- Dynamically generated via NAV_ITEMS.map() -->
+        </ul>
+      </nav>
+
+      <!-- Sub-Component: Header Action Utilities (Search, Wishlist, Cart, Mobile Toggle) -->
+      <div class="header-actions">
+        <!-- Search Toggle Button -->
+        <button class="action-btn" id="searchToggleBtn" title="Search catalog" aria-label="Toggle Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+
+        <!-- Wishlist Indicator Button -->
+        <button class="action-btn" id="wishlistBtn" title="View Wishlist" aria-label="Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="badge-count" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Cart Trigger Button -->
+        <button class="action-btn cart-btn" id="cartToggleBtn" title="View Shopping Cart" aria-label="Open Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="badge-count" id="cartCount">0</span>
+        </button>
+
+        <!-- Mobile Menu Toggle Button (Visible on mobile screens) -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Sub-Component: Expandable Inline Search Bar -->
+    <div class="search-drawer" id="searchDrawer">
+      <div class="search-drawer-content">
+        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="headerSearchInput" class="search-input" placeholder="Search by name, fabric, category (e.g. cashmere, coat, blazer, silk)..." autocomplete="off">
+        <button class="search-close-btn" id="searchCloseBtn" aria-label="Close search">&times;</button>
+      </div>
+    </div>
+  </header>
+  <!-- ================= END HEADER SECTION ================= -->
+
+
+  <!-- ================= SECTION: HERO SHOWCASE ================= -->
+  <!-- Component: High-impact editorial hero banner with flex layout -->
+  <section class="hero-section" id="featured">
+    <div class="hero-container">
+
+      <!-- Sub-Component: Hero Editorial Text & Action Group -->
+      <div class="hero-content">
+        <div class="hero-label">
+          <span class="hero-pill">Autumn / Winter Edition '26</span>
+          <span class="hero-divider"></span>
+          <span class="hero-subpill">Sustainable Luxury</span>
+        </div>
+        <h1 class="hero-title">Timeless Forms.<br><span class="hero-highlight">Architectural</span> Silhouettes.</h1>
+        <p class="hero-description">
+          Engineered from noble fibers, pure mulberry silk, and Italian merino wool. A collection designed for purposeful living, quiet confidence, and enduring elegance.
+        </p>
+
+        <!-- Sub-Component: Action Buttons -->
+        <div class="hero-btn-group">
+          <a href="#catalog" class="btn btn-primary" id="heroShopBtn">
+            Explore Collection
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+          <a href="#story" class="btn btn-secondary">Our Craftsmanship</a>
+        </div>
+
+        <!-- Sub-Component: Trust Metrics Strip (Mapped dynamically from HERO_METRICS in constant.js) -->
+        <div class="hero-metrics" id="heroMetrics">
+          <!-- Dynamically generated via HERO_METRICS.map() -->
+        </div>
+      </div>
+
+      <!-- Sub-Component: Hero Imagery Flex Card -->
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Editorial fashion portrait featuring contemporary apparel" class="hero-main-image" loading="eager">
+          <div class="hero-floating-card">
+            <span class="floating-badge">Curator's Choice</span>
+            <h4 class="floating-title">Pure Cashmere & Raw Wool</h4>
+            <p class="floating-meta">Hand-finished in Milan</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- ================= END HERO SHOWCASE ================= -->
+
+
+  <!-- ================= SECTION: VALUE PROPOSITIONS STRIP ================= -->
+  <!-- Component: 4-Column Flex Highlight Banner for brand trust pillars (Mapped dynamically from VALUE_PROPOSITIONS in constant.js) -->
+  <section class="value-props-section" aria-label="Brand Pillars">
+    <div class="value-props-container" id="valuePropsContainer">
+      <!-- Dynamically generated via VALUE_PROPOSITIONS.map() -->
+    </div>
+  </section>
+  <!-- ================= END VALUE PROPOSITIONS ================= -->
+
+
+  <!-- ================= SECTION: PRODUCT CATALOG ================= -->
+  <!-- Component: Main Interactive Storefront with Flexbox Product Listing (No CSS Grid) -->
+  <section class="catalog-section" id="catalog">
+    <div class="catalog-container">
+
+      <!-- Sub-Component: Catalog Header & Introduction -->
+      <div class="catalog-header">
+        <div class="section-tag-wrapper">
+          <span class="section-tag">Seasonal Curation</span>
+        </div>
+        <h2 class="section-title">The Complete Wardrobe</h2>
+        <p class="section-subtitle">
+          Versatile silhouettes designed to layer seamlessly. Rendered dynamically via JavaScript & JSON.
+        </p>
+      </div>
+
+      <!-- Sub-Component: Interactive Filter Controls Toolbar (Flexbox Layout) -->
+      <div class="catalog-controls">
+        <!-- Category Filter Buttons (Mapped dynamically from CATEGORY_FILTERS in constant.js) -->
+        <div class="filter-pills" id="filterPills" role="tablist" aria-label="Category Filters">
+          <!-- Dynamically generated via CATEGORY_FILTERS.map() -->
+        </div>
+
+        <!-- Secondary Toolbar: Search Box & Sort Selection (Flex Row) -->
+        <div class="filter-secondary">
+          <!-- Quick Search Filter Box -->
+          <div class="quick-search-box">
+            <input type="text" id="catalogSearchInput" class="quick-search-input" placeholder="Filter products...">
+          </div>
+
+          <!-- Sort Dropdown (Mapped dynamically from SORT_OPTIONS in constant.js) -->
+          <div class="sort-wrapper">
+            <label for="sortSelect" class="sort-label">Sort By:</label>
+            <select id="sortSelect" class="sort-select">
+              <!-- Dynamically generated via SORT_OPTIONS.map() -->
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Component: Active Filter Counters & Status -->
+      <div class="catalog-status-bar">
+        <span class="status-count" id="productCountStatus">Showing 12 garments</span>
+        <button class="reset-filter-btn" id="resetFilterBtn" style="display: none;">Clear Filters</button>
+      </div>
+
+      <!-- Sub-Component: Dynamic Product Listing Container (Flexbox Only - No Grid) -->
+      <!-- Populated via index.js using products.json -->
+      <div class="products-flex-container" id="productsFlexContainer">
+        <!-- Product cards injected by JavaScript -->
+      </div>
+
+      <!-- Sub-Component: Empty Search State Fallback -->
+      <div class="empty-state" id="emptyState" style="display: none;">
+        <div class="empty-icon">✧</div>
+        <h3 class="empty-title">No garments match your selection</h3>
+        <p class="empty-desc">Try resetting your filters or searching for terms like "cashmere", "blazer", or "wool".</p>
+        <button class="btn btn-primary" id="emptyResetBtn">View All Garments</button>
+      </div>
+
+    </div>
+  </section>
+  <!-- ================= END PRODUCT CATALOG ================= -->
+
+
+  <!-- ================= SECTION: BRAND STORY & ATELIER PHILOSOPHY ================= -->
+  <!-- Component: 2-Column Flex Story Section -->
+  <section class="story-section" id="story">
+    <div class="story-container">
+
+      <!-- Left Column: Image Collage Flex Box -->
+      <div class="story-visual-column">
+        <div class="story-image-card">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Fabric swatch and pattern tailoring workshop" class="story-image">
+          <div class="story-badge">
+            <span class="story-badge-year">Est. 2021</span>
+            <span class="story-badge-loc">Milano & Copenhagen</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Editorial Narrative -->
+      <div class="story-content-column">
+        <span class="section-tag">Our Atelier Philosophy</span>
+        <h2 class="story-title">Crafting Longevity Over Fleeting Trends.</h2>
+        <p class="story-paragraph">
+          At AURA ATELIER, we reject the disposable cycle of fast fashion. Each garment is meticulously drafted, tested across hundreds of silhouettes, and finished with artisanal techniques that withstand decades of wear.
+        </p>
+        <p class="story-paragraph">
+          We source solely from family-run mills in Northern Italy and certified cruelty-free organic farms. Every seam, double-fold hem, and custom horn button exists to elevate your daily ritual.
+        </p>
+
+        <!-- Feature List (Mapped dynamically from STORY_FEATURES in constant.js) -->
+        <div class="story-features-list" id="storyFeaturesList">
+          <!-- Dynamically generated via STORY_FEATURES.map() -->
+        </div>
+
+        <a href="#catalog" class="btn btn-primary story-cta-btn">Experience The Fabric</a>
+      </div>
+
+    </div>
+  </section>
+  <!-- ================= END BRAND STORY SECTION ================= -->
+
+
+  <!-- ================= SECTION: TESTIMONIALS & REVIEWS ================= -->
+  <!-- Component: Client Testimonials Flex Row (Mapped dynamically from TESTIMONIALS in constant.js) -->
+  <section class="testimonials-section">
+    <div class="testimonials-container">
+      <div class="testimonials-header">
+        <span class="section-tag">Client Impressions</span>
+        <h2 class="section-title">Loved by Discerning Wardrobes</h2>
+      </div>
+
+      <div class="testimonials-flex-row" id="testimonialsFlexRow">
+        <!-- Dynamically generated via TESTIMONIALS.map() -->
+      </div>
+    </div>
+  </section>
+  <!-- ================= END TESTIMONIALS SECTION ================= -->
+
+
+  <!-- ================= SECTION: NEWSLETTER SUBSCRIPTION ================= -->
+  <!-- Component: Newsletter Flexbox Banner -->
+  <section class="newsletter-section">
+    <div class="newsletter-container">
+      <div class="newsletter-content">
+        <span class="newsletter-tag">Private Club</span>
+        <h2 class="newsletter-title">Receive Curated Editions & Private Invitations</h2>
+        <p class="newsletter-desc">Subscribe to receive early access to limited capsule releases, private sales, and seasonal lookbooks.</p>
+        
+        <form class="newsletter-form" id="newsletterForm" onsubmit="return false;">
+          <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your personal email address..." required>
+          <button type="submit" class="btn btn-primary newsletter-submit-btn">Subscribe</button>
+        </form>
+        <span class="newsletter-privacy">We respect your discretion. Unsubscribe with one click anytime.</span>
+      </div>
+    </div>
+  </section>
+  <!-- ================= END NEWSLETTER SECTION ================= -->
+
+
+  <!-- ================= SECTION: SITE FOOTER ================= -->
+  <!-- Component: Comprehensive Multi-Column Flex Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+
+      <!-- Footer Column 1: Brand Info & Socials (Mapped dynamically from FOOTER_SOCIAL_LINKS in constant.js) -->
+      <div class="footer-col brand-col">
+        <a href="#" class="brand-logo footer-logo">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-text">AURA <span class="logo-subtext">ATELIER</span></span>
+        </a>
+        <p class="footer-bio">
+          Contemporary silhouettes engineered with architectural precision, noble natural fibers, and mindful craftsmanship.
+        </p>
+        <div class="footer-social-links" id="footerSocialLinks">
+          <!-- Dynamically generated via FOOTER_SOCIAL_LINKS.map() -->
+        </div>
+      </div>
+
+      <!-- Footer Column 2: Collections (Mapped dynamically from FOOTER_COLLECTIONS_LINKS in constant.js) -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Collections</h4>
+        <ul class="footer-links" id="footerCollectionsLinks">
+          <!-- Dynamically generated via FOOTER_COLLECTIONS_LINKS.map() -->
+        </ul>
+      </div>
+
+      <!-- Footer Column 3: Client Concierge (Mapped dynamically from FOOTER_SERVICES_LINKS in constant.js) -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Client Services</h4>
+        <ul class="footer-links" id="footerServicesLinks">
+          <!-- Dynamically generated via FOOTER_SERVICES_LINKS.map() -->
+        </ul>
+      </div>
+
+      <!-- Footer Column 4: Atelier (Mapped dynamically from FOOTER_ATELIER_LINKS in constant.js) -->
+      <div class="footer-col">
+        <h4 class="footer-heading">The Atelier</h4>
+        <ul class="footer-links" id="footerAtelierLinks">
+          <!-- Dynamically generated via FOOTER_ATELIER_LINKS.map() -->
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom Copyright & Legal Bar (Flex Row) -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2026</span> AURA ATELIER INC. All rights reserved. Designed for timeless living.
+        </p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <span class="legal-separator">•</span>
+          <a href="#">Terms of Service</a>
+          <span class="legal-separator">•</span>
+          <a href="#">Accessibility Statement</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ================= END SITE FOOTER ================= -->
+
+
+  <!-- ================= INTERACTIVE COMPONENT: SHOPPING CART DRAWER ================= -->
+  <!-- Component: Slide-out Shopping Bag Drawer with Flexbox structure -->
+  <div class="cart-drawer-overlay" id="cartOverlay">
+    <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+      
+      <!-- Cart Header (Flex Row) -->
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <h3>Your Wardrobe</h3>
+          <span class="cart-items-badge" id="cartBadgeText">0 items</span>
+        </div>
+        <button class="cart-close-btn" id="cartCloseBtn" aria-label="Close cart">&times;</button>
+      </div>
+
+      <!-- Cart Body: List of Items (Flex Column) -->
+      <div class="cart-items-container" id="cartItemsList">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+
+      <!-- Cart Footer: Subtotal and Checkout Button (Flex Column) -->
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span class="summary-value" id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="cart-summary-row shipping-row">
+          <span>Estimated Delivery</span>
+          <span class="free-shipping-tag">FREE</span>
+        </div>
+        <button class="btn btn-primary checkout-btn" id="checkoutBtn">
+          Proceed to Checkout
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+        <button class="btn-clear-cart" id="clearCartBtn">Empty Shopping Bag</button>
+      </div>
+
+    </aside>
+  </div>
+  <!-- ================= END SHOPPING CART DRAWER ================= -->
+
+
+  <!-- ================= INTERACTIVE COMPONENT: QUICK VIEW MODAL ================= -->
+  <!-- Component: Product Detail Popup Modal using Flexbox layout -->
+  <div class="modal-overlay" id="quickViewModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close quick view">&times;</button>
+      <div class="modal-flex-body" id="modalProductDetails">
+        <!-- Injected dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+  <!-- ================= END QUICK VIEW MODAL ================= -->
+
+
+  <!-- ================= INTERACTIVE COMPONENT: TOAST NOTIFICATIONS ================= -->
+  <!-- Component: Floating toast feedback container for Cart & Wishlist actions -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+  <!-- ================= END TOAST NOTIFICATIONS ================= -->
+
+
+  <!-- Constants & Data Arrays Configuration -->
+  <script src="js/constant.js"></script>
+
+  <!-- Main Application JavaScript Logic -->
+  <script src="js/index.js"></script>
+</body>
+
+</html>
