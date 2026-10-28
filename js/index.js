@@ -25,216 +25,8 @@ const AppState = {
   selectedQuickProduct: null
 };
 
-/**
- * Fallback dataset: In case index.html is loaded directly via file:// protocol
- * where standard browser CORS policies might block local fetch('./data/products.json').
- */
-const FALLBACK_PRODUCTS = [
-  {
-    id: "prod-001",
-    name: "The Minimalist Cashmere Coat",
-    category: "outerwear",
-    gender: "women",
-    price: 289.00,
-    originalPrice: 349.00,
-    rating: 4.9,
-    reviewsCount: 84,
-    badge: "Bestseller",
-    description: "Crafted from 100% sustainably sourced Mongolian cashmere. Tailored silhouette featuring hand-stitched lapels and hidden horn buttons.",
-    colors: ["#1A1A24", "#C2A68C", "#4A5568"],
-    sizes: ["XS", "S", "M", "L"],
-    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: true
-  },
-  {
-    id: "prod-002",
-    name: "Tailored Italian Wool Blazer",
-    category: "tailoring",
-    gender: "men",
-    price: 245.00,
-    originalPrice: 290.00,
-    rating: 4.8,
-    reviewsCount: 56,
-    badge: "New Arrival",
-    description: "Refined single-breasted blazer woven in Biella, Italy. Modern drop-shoulder drape with dual back vents and breathable cupro lining.",
-    colors: ["#0B1E3F", "#2D3748", "#8D7B68"],
-    sizes: ["38R", "40R", "42R", "44R"],
-    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: true
-  },
-  {
-    id: "prod-003",
-    name: "Mulberry Silk Midi Slip Dress",
-    category: "dresses",
-    gender: "women",
-    price: 175.00,
-    originalPrice: null,
-    rating: 4.9,
-    reviewsCount: 112,
-    badge: "Trending",
-    description: "22-Momme pure grade-6A mulberry silk cut on the bias for an effortless fluid cascade. Features adjustable delicate straps.",
-    colors: ["#E8D8C8", "#0B1E3F", "#582841"],
-    sizes: ["XS", "S", "M", "L"],
-    image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: true
-  },
-  {
-    id: "prod-004",
-    name: "Heavyweight Organic Cotton Tee",
-    category: "essentials",
-    gender: "unisex",
-    price: 48.00,
-    originalPrice: null,
-    rating: 4.7,
-    reviewsCount: 230,
-    badge: "Core Essential",
-    description: "280 GSM combed organic cotton. Boxy drop-shoulder cut with ribbed crewneck collar that holds structure wash after wash.",
-    colors: ["#FFFFFF", "#0B1E3F", "#718096", "#1A202C"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: false
-  },
-  {
-    id: "prod-005",
-    name: "Relaxed Pleated Wide-Leg Trousers",
-    category: "bottoms",
-    gender: "men",
-    price: 135.00,
-    originalPrice: 160.00,
-    rating: 4.8,
-    reviewsCount: 42,
-    badge: "Sale",
-    description: "Double forward pleats, tapered wide-leg drape, and interior waist adjusters. Cut from structured twill cotton blend.",
-    colors: ["#1A1A24", "#7E786B", "#4A5568"],
-    sizes: ["30", "32", "34", "36"],
-    image: "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: false
-  },
-  {
-    id: "prod-006",
-    name: "Heritage Cotton Gabardine Trench",
-    category: "outerwear",
-    gender: "women",
-    price: 260.00,
-    originalPrice: 310.00,
-    rating: 4.9,
-    reviewsCount: 78,
-    badge: "Signature",
-    description: "Water-resistant woven cotton gabardine featuring storm flap, horn buckles, belted waist, and signature horn-effect buttons.",
-    colors: ["#D9C3A5", "#1B2A4A"],
-    sizes: ["XS", "S", "M", "L"],
-    image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: true
-  },
-  {
-    id: "prod-007",
-    name: "Merino Wool Ribbed Turtleneck",
-    category: "knitwear",
-    gender: "unisex",
-    price: 128.00,
-    originalPrice: null,
-    rating: 4.8,
-    reviewsCount: 95,
-    badge: "Seasonal",
-    description: "Spun from superfine 19.5-micron extrafine merino wool. Seamless knit technology prevents itching and retains shape.",
-    colors: ["#0B1E3F", "#E2DCD5", "#2D3748"],
-    sizes: ["S", "M", "L", "XL"],
-    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: true
-  },
-  {
-    id: "prod-008",
-    name: "Artisanal Saddle Crossbody Bag",
-    category: "accessories",
-    gender: "unisex",
-    price: 195.00,
-    originalPrice: 225.00,
-    rating: 5.0,
-    reviewsCount: 64,
-    badge: "Handmade",
-    description: "Full-grain vegetable-tanned leather handcrafted in Tuscany. Solid brushed brass hardware with magnetic flap closure.",
-    colors: ["#694825", "#1A1A1A", "#8B4513"],
-    sizes: ["One Size"],
-    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: false
-  },
-  {
-    id: "prod-009",
-    name: "Crisp Poplin Oversized Shirt",
-    category: "tops",
-    gender: "women",
-    price: 88.00,
-    originalPrice: null,
-    rating: 4.6,
-    reviewsCount: 118,
-    badge: "Bestseller",
-    description: "100% Egyptian long-staple cotton poplin. Mother-of-pearl buttons with elongated curved hem and relaxed architectural cuffs.",
-    colors: ["#FFFFFF", "#7EA1C4", "#D1D5DB"],
-    sizes: ["XS", "S", "M", "L"],
-    image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: false
-  },
-  {
-    id: "prod-010",
-    name: "Linen Resort Overshirt & Shorts",
-    category: "essentials",
-    gender: "men",
-    price: 140.00,
-    originalPrice: 175.00,
-    rating: 4.7,
-    reviewsCount: 38,
-    badge: "Summer '26",
-    description: "French flax washed linen for an ultra-soft broken-in feel. Camp collar silhouette matched with drawstring waist bottoms.",
-    colors: ["#D5C5B2", "#0B1E3F", "#5F6B58"],
-    sizes: ["S", "M", "L", "XL"],
-    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: false
-  },
-  {
-    id: "prod-011",
-    name: "Sculptural Chunky Knit Cardigan",
-    category: "knitwear",
-    gender: "women",
-    price: 155.00,
-    originalPrice: null,
-    rating: 4.9,
-    reviewsCount: 89,
-    badge: "Trending",
-    description: "Chunky waffle stitch in alpaca-wool blend. Oversized tortoiseshell buttons and lantern sleeves with tight ribbed cuffs.",
-    colors: ["#EDE8E1", "#8C7A6B", "#2A3A54"],
-    sizes: ["S", "M", "L"],
-    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: true
-  },
-  {
-    id: "prod-012",
-    name: "Structured Minimalist Leather Tote",
-    category: "accessories",
-    gender: "unisex",
-    price: 210.00,
-    originalPrice: 250.00,
-    rating: 4.9,
-    reviewsCount: 140,
-    badge: "Bestseller",
-    description: "Clean lines, reinforced base, and padded internal laptop sleeve fitting up to 16\". Finished with hand-painted edges.",
-    colors: ["#0B1E3F", "#1A1A1A", "#B38B6D"],
-    sizes: ["One Size"],
-    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
-    inStock: true,
-    featured: false
-  }
-];
+// Products catalog is now defined and loaded from js/products.js (PRODUCTS array)
+
 
 // ==========================================================================
 // 2. DOM ELEMENT REFERENCES
@@ -249,7 +41,7 @@ const DOM = {
   searchDrawer: document.getElementById('searchDrawer'),
   searchCloseBtn: document.getElementById('searchCloseBtn'),
   headerSearchInput: document.getElementById('headerSearchInput'),
-  
+
   // Hero
   heroMetrics: document.getElementById('heroMetrics'),
 
@@ -444,6 +236,7 @@ function renderAllMappedConstants() {
 /**
  * Initialize application when DOM is ready
  */
+
 document.addEventListener('DOMContentLoaded', () => {
   renderAllMappedConstants();
   initCopyrightYear();
@@ -462,19 +255,28 @@ function initCopyrightYear() {
 }
 
 /**
- * Fetches product catalog from JSON file with graceful fallback
+ * Loads product catalog from products.js (with JSON fetch support if served via HTTP)
  */
 async function loadProductsData() {
+  // If PRODUCTS array is loaded from products.js, use it directly (works everywhere, including file:// with zero CORS errors)
+  if (typeof PRODUCTS !== 'undefined' && Array.isArray(PRODUCTS) && PRODUCTS.length > 0) {
+    AppState.products = [...PRODUCTS];
+    applyFiltersAndSort();
+    return;
+  }
+
+  // Fallback to fetch data/products.json if served over HTTP/HTTPS
   try {
     const response = await fetch('data/products.json');
     if (!response.ok) {
       throw new Error(`HTTP Error: ${response.status}`);
     }
     const data = await response.json();
-    AppState.products = Array.isArray(data) && data.length > 0 ? data : FALLBACK_PRODUCTS;
+    console.log('Fetched products from data/products.json:', data);
+    AppState.products = Array.isArray(data) && data.length > 0 ? data : [];
   } catch (error) {
-    console.warn('Could not fetch data/products.json via HTTP request (likely file:// protocol). Utilizing local products data.', error);
-    AppState.products = FALLBACK_PRODUCTS;
+    console.warn('Could not fetch data/products.json. Ensure js/products.js is loaded.', error);
+    AppState.products = [];
   }
 
   // Initial filtering and rendering
@@ -583,67 +385,64 @@ function renderProductCards(products) {
 
     // Original Price HTML
     const originalPriceHtml = hasDiscount
-      ? `<span class="original-price">$${product.originalPrice.toFixed(2)}</span>`
+      ? `<span class="original-price">₹${product.originalPrice.toFixed(2)}</span > `
       : '';
 
     return `
-      <!-- Component: Product Flex Card -->
-      <article class="product-card" data-product-id="${product.id}">
-        
-        <!-- Media Container -->
-        <div class="product-image-box">
-          <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
-          
-          ${badgeHtml}
+  <article class="product-card" data-product-id="${product.id}">
 
-          <!-- Floating Actions Overlay (Quick View & Wishlist) -->
-          <div class="product-actions-overlay">
-            <button class="product-quick-btn" data-action="quick-view" data-id="${product.id}">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                <circle cx="12" cy="12" r="3"></circle>
-              </svg>
-              Quick View
-            </button>
-            <button class="product-wish-btn ${isWishlisted ? 'active' : ''}" data-action="toggle-wishlist" data-id="${product.id}" title="Save to Wishlist">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-              </svg>
-            </button>
-          </div>
+    <!-- Media Container -->
+    <div class="product-image-box">
+      <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
+
+        ${badgeHtml}
+
+        <!-- Floating Actions Overlay (Quick View & Wishlist) -->
+        <div class="product-actions-overlay">
+          <button class="product-quick-btn" data-action="quick-view" data-id="${product.id}">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            Quick View
+          </button>
+          <button class="product-wish-btn ${isWishlisted ? 'active' : ''}" data-action="toggle-wishlist" data-id="${product.id}" title="Save to Wishlist">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </button>
+        </div>
+    </div>
+
+    <div class="product-info">
+      <div class="product-meta-row">
+        <span class="product-category">${product.category}</span>
+        <div class="product-rating">
+          <span class="rating-star">★</span>
+          <span>${product.rating.toFixed(1)}</span>
+        </div>
+      </div>
+
+      <h3 class="product-name" title="${product.name}">${product.name}</h3>
+
+      ${swatchesHtml}
+
+      <div class="product-footer">
+        <div class="price-box">
+          <span class="current-price">₹${product.price.toFixed(2)}</span>
+          ${originalPriceHtml}
         </div>
 
-        <!-- Product Information Body (Flex Column) -->
-        <div class="product-info">
-          <div class="product-meta-row">
-            <span class="product-category">${product.category}</span>
-            <div class="product-rating">
-              <span class="rating-star">★</span>
-              <span>${product.rating.toFixed(1)}</span>
-            </div>
-          </div>
+        <button class="add-cart-icon-btn" data-action="add-to-cart" data-id="${product.id}" title="Add to Bag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="5" x2="12" y2="19"></line>
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
 
-          <h3 class="product-name" title="${product.name}">${product.name}</h3>
-
-          ${swatchesHtml}
-
-          <!-- Product Card Footer (Price & Add to Bag) -->
-          <div class="product-footer">
-            <div class="price-box">
-              <span class="current-price">$${product.price.toFixed(2)}</span>
-              ${originalPriceHtml}
-            </div>
-
-            <button class="add-cart-icon-btn" data-action="add-to-cart" data-id="${product.id}" title="Add to Bag">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="12" y1="5" x2="12" y2="19"></line>
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-
-      </article>
+  </article>
     `;
   }).join('');
 }
@@ -676,7 +475,7 @@ function addToCart(productId, size = null) {
 
   saveCartToStorage();
   updateCartUI();
-  showToast(`Added "${product.name}" (${chosenSize}) to your shopping bag.`);
+  showToast(`Added "${product.name}"(${chosenSize}) to your shopping bag.`);
 }
 
 /**
@@ -726,15 +525,15 @@ function updateCartUI() {
 
   // Update Badges
   if (DOM.cartCountBadge) DOM.cartCountBadge.textContent = totalItems;
-  if (DOM.cartBadgeText) DOM.cartBadgeText.textContent = `${totalItems} item${totalItems === 1 ? '' : 's'}`;
-  if (DOM.cartSubtotal) DOM.cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+  if (DOM.cartBadgeText) DOM.cartBadgeText.textContent = `${totalItems} item${totalItems === 1 ? '' : 's'} `;
+  if (DOM.cartSubtotal) DOM.cartSubtotal.textContent = `$${subtotal.toFixed(2)} `;
 
   // Render items into drawer
   if (!DOM.cartItemsList) return;
 
   if (AppState.cart.length === 0) {
     DOM.cartItemsList.innerHTML = `
-      <div class="cart-empty-message">
+  < div class="cart-empty-message" >
         <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -743,19 +542,19 @@ function updateCartUI() {
         <button class="btn btn-primary" onclick="closeCartDrawer(); window.location.hash = '#catalog';">
           Discover Collection
         </button>
-      </div>
-    `;
+      </div >
+  `;
     return;
   }
 
   DOM.cartItemsList.innerHTML = AppState.cart.map((item, index) => `
-    <div class="cart-item-card">
-      <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+  < div class="cart-item-card" >
+    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
       <div class="cart-item-info">
         <h4 class="cart-item-title">${item.name}</h4>
         <span class="cart-item-size-badge">Size: ${item.size}</span>
         <span class="cart-item-price">$${(item.price * item.quantity).toFixed(2)}</span>
-        
+
         <div class="cart-item-controls">
           <div class="qty-btn-group">
             <button class="qty-btn" onclick="updateCartItemQuantity(${index}, -1)" title="Decrease quantity">−</button>
@@ -766,7 +565,7 @@ function updateCartUI() {
         </div>
       </div>
     </div>
-  `).join('');
+`).join('');
 }
 
 /**
@@ -835,25 +634,25 @@ function openQuickView(productId) {
   const hasDiscount = product.originalPrice && product.originalPrice > product.price;
 
   DOM.modalProductDetails.innerHTML = `
-    <!-- Modal Media Column (Flex Child) -->
+  < !--Modal Media Column(Flex Child)-- >
     <div class="modal-media-col">
       <img src="${product.image}" alt="${product.name}" class="modal-img">
     </div>
 
-    <!-- Modal Information Column (Flex Child) -->
-    <div class="modal-info-col">
-      <span class="modal-category">${product.category} • ${product.gender || 'unisex'}</span>
-      <h2 class="modal-title">${product.name}</h2>
-      
-      <div class="modal-price-row">
-        <span class="modal-current-price">$${product.price.toFixed(2)}</span>
-        ${hasDiscount ? `<span class="modal-original-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
-      </div>
+    <!--Modal Information Column(Flex Child)-- >
+  <div class="modal-info-col">
+    <span class="modal-category">${product.category} • ${product.gender || 'unisex'}</span>
+    <h2 class="modal-title">${product.name}</h2>
 
-      <p class="modal-desc">${product.description}</p>
+    <div class="modal-price-row">
+      <span class="modal-current-price">$${product.price.toFixed(2)}</span>
+      ${hasDiscount ? `<span class="modal-original-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
+    </div>
 
-      <!-- Size Selector -->
-      ${product.sizes && product.sizes.length > 0 ? `
+    <p class="modal-desc">${product.description}</p>
+
+    <!-- Size Selector -->
+    ${product.sizes && product.sizes.length > 0 ? `
         <div class="modal-size-selector">
           <span class="size-selector-label">Select Size:</span>
           <div class="size-pill-row" id="modalSizePills">
@@ -864,12 +663,12 @@ function openQuickView(productId) {
         </div>
       ` : ''}
 
-      <!-- Modal Action Buttons (Flex Row) -->
-      <button class="btn btn-primary" id="modalAddToCartBtn" style="margin-top: 10px;">
-        Add to Shopping Bag • $${product.price.toFixed(2)}
-      </button>
-    </div>
-  `;
+    <!-- Modal Action Buttons (Flex Row) -->
+    <button class="btn btn-primary" id="modalAddToCartBtn" style="margin-top: 10px;">
+      Add to Shopping Bag • $${product.price.toFixed(2)}
+    </button>
+  </div>
+`;
 
   // Attach size selector listeners inside modal
   const sizePills = DOM.modalProductDetails.querySelectorAll('.size-pill');
@@ -922,9 +721,9 @@ function showToast(message) {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-    <span class="toast-icon">✧</span>
+  < span class="toast-icon" >✧</span >
     <span>${message}</span>
-  `;
+`;
 
   DOM.toastContainer.appendChild(toast);
 

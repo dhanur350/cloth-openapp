@@ -8,10 +8,10 @@
    ========================================================================== */
 :root {
   /* Primary Background Color: Simple white bg color as requested */
-  --primary-bg-color: #ffffff;
+  --primary-bg-color: #F5F2E6;
 
   /* Secondary Background Color: Soft warm off-white for layered depth */
-  --secondary-bg-color: #f8fafc;
+  --secondary-bg-color: #E6E9F5;
 
   /* Primary Text Color: Darkblue as requested for starter */
   --primary-text-color: #0b1e3f;
@@ -46,7 +46,7 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
   /* Elevation Box Shadows */
-  --shadow-sm: 0 2px 6px rgba(11, 30, 63, 0.04);
+  --shadow-sm: 0 2px 6px rgba(238, 199, 92, 0.04);
   --shadow-md: 0 8px 20px rgba(11, 30, 63, 0.08);
   --shadow-lg: 0 16px 36px rgba(11, 30, 63, 0.12);
   --shadow-drawer: -6px 0 30px rgba(11, 30, 63, 0.16);
@@ -107,7 +107,8 @@ button {
   outline: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -246,7 +247,6 @@ ul, ol {
 
 .site-header.scrolled {
   box-shadow: var(--shadow-sm);
-  background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(8px);
 }
 
@@ -266,6 +266,22 @@ ul, ol {
   align-items: center;
   gap: 8px;
   color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.brand-logo-img {
+  height: 52px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+  mix-blend-mode: multiply;
+  transition: transform var(--transition-fast, 0.2s ease), opacity var(--transition-fast, 0.2s ease);
+}
+
+.brand-logo:hover .brand-logo-img {
+  transform: scale(1.02);
+  opacity: 0.95;
 }
 
 .logo-symbol {
@@ -749,9 +765,9 @@ ul, ol {
 }
 
 .filter-pill.active {
-  background-color: var(--primary-text-color);
-  color: #ffffff;
-  border-color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  border-color: var(--primary-bg-color);
 }
 
 .filter-secondary {
@@ -868,7 +884,8 @@ ul, ol {
 .product-image-box {
   position: relative;
   width: 100%;
-  padding-top: 130%; /* 4:5 luxury fashion aspect ratio */
+  padding-top: 130%;
+  /* 4:5 luxury fashion aspect ratio */
   background-color: var(--secondary-bg-color);
   overflow: hidden;
 }
@@ -1041,7 +1058,7 @@ ul, ol {
   height: 14px;
   border-radius: 50%;
   border: 1px solid rgba(0, 0, 0, 0.15);
-  box-shadow: inset 0 0 2px rgba(0,0,0,0.2);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 /* Price & Add to Cart Footer (Flex Row) */
@@ -2022,7 +2039,12 @@ ul, ol {
 
 /* Mobile & Small Tablet Breakpoint (Under 768px) */
 @media (max-width: 768px) {
+
   /* Header & Navigation */
+  .brand-logo-img {
+    height: 44px;
+  }
+
   .mobile-menu-toggle {
     display: flex;
   }
@@ -2138,6 +2160,10 @@ ul, ol {
 
 /* Smartphone Breakpoint (Under 520px) */
 @media (max-width: 520px) {
+  .brand-logo-img {
+    height: 38px;
+  }
+
   .announcement-bar {
     font-size: 0.72rem;
   }

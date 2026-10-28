@@ -1,0 +1,321 @@
+/**
+ * ==========================================================================
+ * AURA ATELIER - PRODUCTS CATALOG (products.js)
+ * All products data moved from index.js to this dedicated file.
+ * Can be called and loaded directly via <script src="js/products.js"></script>
+ * without triggering browser file:// CORS policy errors.
+ * ==========================================================================
+ */
+
+const PRODUCTS = [
+  {
+    id: "prod-001",
+    name: "The Minimalist Cashmere Coat",
+    category: "outerwear",
+    gender: "women",
+    price: 3000.00,
+    originalPrice: 349.00,
+    rating: 4.9,
+    reviewsCount: 84,
+    badge: "Bestseller",
+    description: "Crafted from 100% sustainably sourced Mongolian cashmere. Tailored silhouette featuring hand-stitched lapels and hidden horn buttons.",
+    colors: [
+      "#1A1A24",
+      "#C2A68C",
+      "#4A5568"
+    ],
+    sizes: [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: "prod-002",
+    name: "Tailored Italian Wool Blazer",
+    category: "tailoring",
+    gender: "men",
+    price: 245.00,
+    originalPrice: 290.00,
+    rating: 4.8,
+    reviewsCount: 56,
+    badge: "New Arrival",
+    description: "Refined single-breasted blazer woven in Biella, Italy. Modern drop-shoulder drape with dual back vents and breathable cupro lining.",
+    colors: [
+      "#0B1E3F",
+      "#2D3748",
+      "#8D7B68"
+    ],
+    sizes: [
+      "38R",
+      "40R",
+      "42R",
+      "44R"
+    ],
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: "prod-003",
+    name: "Mulberry Silk Midi Slip Dress",
+    category: "dresses",
+    gender: "women",
+    price: 175.00,
+    originalPrice: null,
+    rating: 4.9,
+    reviewsCount: 112,
+    badge: "Trending",
+    description: "22-Momme pure grade-6A mulberry silk cut on the bias for an effortless fluid cascade. Features adjustable delicate straps.",
+    colors: [
+      "#E8D8C8",
+      "#0B1E3F",
+      "#582841"
+    ],
+    sizes: [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: "prod-004",
+    name: "Heavyweight Organic Cotton Tee",
+    category: "essentials",
+    gender: "unisex",
+    price: 48.00,
+    originalPrice: null,
+    rating: 4.7,
+    reviewsCount: 230,
+    badge: "Core Essential",
+    description: "280 GSM combed organic cotton. Boxy drop-shoulder cut with ribbed crewneck collar that holds structure wash after wash.",
+    colors: [
+      "#FFFFFF",
+      "#0B1E3F",
+      "#718096",
+      "#1A202C"
+    ],
+    sizes: [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    image: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: "prod-005",
+    name: "Relaxed Pleated Wide-Leg Trousers",
+    category: "bottoms",
+    gender: "men",
+    price: 135.00,
+    originalPrice: 160.00,
+    rating: 4.8,
+    reviewsCount: 42,
+    badge: "Sale",
+    description: "Double forward pleats, tapered wide-leg drape, and interior waist adjusters. Cut from structured twill cotton blend.",
+    colors: [
+      "#1A1A24",
+      "#7E786B",
+      "#4A5568"
+    ],
+    sizes: [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    image: "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: "prod-006",
+    name: "Heritage Cotton Gabardine Trench",
+    category: "outerwear",
+    gender: "women",
+    price: 260.00,
+    originalPrice: 310.00,
+    rating: 4.9,
+    reviewsCount: 78,
+    badge: "Signature",
+    description: "Water-resistant woven cotton gabardine featuring storm flap, horn buckles, belted waist, and signature horn-effect buttons.",
+    colors: [
+      "#D9C3A5",
+      "#1B2A4A"
+    ],
+    sizes: [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: "prod-007",
+    name: "Merino Wool Ribbed Turtleneck",
+    category: "knitwear",
+    gender: "unisex",
+    price: 128.00,
+    originalPrice: null,
+    rating: 4.8,
+    reviewsCount: 95,
+    badge: "Seasonal",
+    description: "Spun from superfine 19.5-micron extrafine merino wool. Seamless knit technology prevents itching and retains shape.",
+    colors: [
+      "#0B1E3F",
+      "#E2DCD5",
+      "#2D3748"
+    ],
+    sizes: [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: "prod-008",
+    name: "Artisanal Saddle Crossbody Bag",
+    category: "accessories",
+    gender: "unisex",
+    price: 195.00,
+    originalPrice: 225.00,
+    rating: 5.0,
+    reviewsCount: 64,
+    badge: "Handmade",
+    description: "Full-grain vegetable-tanned leather handcrafted in Tuscany. Solid brushed brass hardware with magnetic flap closure.",
+    colors: [
+      "#694825",
+      "#1A1A1A",
+      "#8B4513"
+    ],
+    sizes: [
+      "One Size"
+    ],
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: "prod-009",
+    name: "Crisp Poplin Oversized Shirt",
+    category: "tops",
+    gender: "women",
+    price: 88.00,
+    originalPrice: null,
+    rating: 4.6,
+    reviewsCount: 118,
+    badge: "Bestseller",
+    description: "100% Egyptian long-staple cotton poplin. Mother-of-pearl buttons with elongated curved hem and relaxed architectural cuffs.",
+    colors: [
+      "#FFFFFF",
+      "#7EA1C4",
+      "#D1D5DB"
+    ],
+    sizes: [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    image: "https://images.unsplash.com/photo-1598554747436-c9293d6a588f?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: "prod-010",
+    name: "Linen Resort Overshirt & Shorts",
+    category: "essentials",
+    gender: "men",
+    price: 140.00,
+    originalPrice: 175.00,
+    rating: 4.7,
+    reviewsCount: 38,
+    badge: "Summer '26",
+    description: "French flax washed linen for an ultra-soft broken-in feel. Camp collar silhouette matched with drawstring waist bottoms.",
+    colors: [
+      "#D5C5B2",
+      "#0B1E3F",
+      "#5F6B58"
+    ],
+    sizes: [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    image: "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: false
+  },
+  {
+    id: "prod-011",
+    name: "Sculptural Chunky Knit Cardigan",
+    category: "knitwear",
+    gender: "women",
+    price: 155.00,
+    originalPrice: null,
+    rating: 4.9,
+    reviewsCount: 89,
+    badge: "Trending",
+    description: "Chunky waffle stitch in alpaca-wool blend. Oversized tortoiseshell buttons and lantern sleeves with tight ribbed cuffs.",
+    colors: [
+      "#EDE8E1",
+      "#8C7A6B",
+      "#2A3A54"
+    ],
+    sizes: [
+      "S",
+      "M",
+      "L"
+    ],
+    image: "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: true
+  },
+  {
+    id: "prod-012",
+    name: "Structured Minimalist Leather Tote",
+    category: "accessories",
+    gender: "unisex",
+    price: 210.00,
+    originalPrice: 250.00,
+    rating: 4.9,
+    reviewsCount: 140,
+    badge: "Bestseller",
+    description: "Clean lines, reinforced base, and padded internal laptop sleeve fitting up to 16\". Finished with hand-painted edges.",
+    colors: [
+      "#0B1E3F",
+      "#1A1A1A",
+      "#B38B6D"
+    ],
+    sizes: [
+      "One Size"
+    ],
+    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80",
+    inStock: true,
+    featured: false
+  }
+];
+
+// Aliases to support multiple naming conventions
+const FALLBACK_PRODUCTS = PRODUCTS;
+const PRODUCTS_DATA = PRODUCTS;

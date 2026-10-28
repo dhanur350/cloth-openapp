@@ -5,13 +5,22 @@
   <!-- ================= META CONFIGURATION ================= -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AURA ATELIER - Contemporary Luxury Clothing & Sustainable Ready-to-Wear Apparel.">
-  <title>AURA ATELIER | Contemporary Luxury Apparel</title>
+  <meta name="description" content="Sukoon Clothing - Handmade, Mindful, Himalayan Contemporary Luxury Apparel.">
+  <title>Sukoon Clothing | Handmade • Mindful • Himalayan</title>
+
+  <!-- Favicon Configuration -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="logo.png">
 
   <!-- Google Fonts: Playfair Display (Serif Elegance) & Plus Jakarta Sans (Clean Modern Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
@@ -24,10 +33,11 @@
   <aside class="announcement-bar" id="announcementBar">
     <div class="announcement-container">
       <p class="announcement-text">
-        <span class="announcement-tag">Exclusive</span> Complimentary Worldwide Shipping on Orders Over $150 &nbsp;•&nbsp; Code: <strong>AURA10</strong> for 10% Off
+        <span class="announcement-tag">Exclusive</span> Complimentary Worldwide Shipping on Orders Over ₹150
+        &nbsp;•&nbsp; Code: <strong>AURA10</strong> for 10% Off
       </p>
       <div class="announcement-actions">
-        <span class="currency-badge">USD ($)</span>
+        <span class="currency-badge">INR (₹)</span>
       </div>
     </div>
   </aside>
@@ -40,9 +50,8 @@
     <div class="header-container">
 
       <!-- Sub-Component: Brand Logo -->
-      <a href="#" class="brand-logo" aria-label="Aura Atelier Home">
-        <span class="logo-symbol">✦</span>
-        <span class="logo-text">AURA <span class="logo-subtext">ATELIER</span></span>
+      <a href="#" class="brand-logo" aria-label="Sukoon Clothing Home">
+        <img src="logo.png" alt="Sukoon Clothing" class="brand-logo-img" width="494" height="548" fetchpriority="high" decoding="async">
       </a>
 
       <!-- Sub-Component: Desktop Navigation Menu (Mapped dynamically from NAV_ITEMS in constant.js) -->
@@ -56,7 +65,8 @@
       <div class="header-actions">
         <!-- Search Toggle Button -->
         <button class="action-btn" id="searchToggleBtn" title="Search catalog" aria-label="Toggle Search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8"></circle>
             <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
           </svg>
@@ -64,15 +74,20 @@
 
         <!-- Wishlist Indicator Button -->
         <button class="action-btn" id="wishlistBtn" title="View Wishlist" aria-label="Wishlist">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+            </path>
           </svg>
           <span class="badge-count" id="wishlistCount">0</span>
         </button>
 
         <!-- Cart Trigger Button -->
-        <button class="action-btn cart-btn" id="cartToggleBtn" title="View Shopping Cart" aria-label="Open Shopping Bag">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <button class="action-btn cart-btn" id="cartToggleBtn" title="View Shopping Cart"
+          aria-label="Open Shopping Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
             <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
             <line x1="3" y1="6" x2="21" y2="6"></line>
             <path d="M16 10a4 4 0 0 1-8 0"></path>
@@ -93,11 +108,13 @@
     <!-- Sub-Component: Expandable Inline Search Bar -->
     <div class="search-drawer" id="searchDrawer">
       <div class="search-drawer-content">
-        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg class="search-input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2">
           <circle cx="11" cy="11" r="8"></circle>
           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
         </svg>
-        <input type="text" id="headerSearchInput" class="search-input" placeholder="Search by name, fabric, category (e.g. cashmere, coat, blazer, silk)..." autocomplete="off">
+        <input type="text" id="headerSearchInput" class="search-input"
+          placeholder="Search by name, fabric, category (e.g. cashmere, coat, blazer, silk)..." autocomplete="off">
         <button class="search-close-btn" id="searchCloseBtn" aria-label="Close search">&times;</button>
       </div>
     </div>
@@ -119,14 +136,16 @@
         </div>
         <h1 class="hero-title">Timeless Forms.<br><span class="hero-highlight">Architectural</span> Silhouettes.</h1>
         <p class="hero-description">
-          Engineered from noble fibers, pure mulberry silk, and Italian merino wool. A collection designed for purposeful living, quiet confidence, and enduring elegance.
+          Engineered from noble fibers, pure mulberry silk, and Italian merino wool. A collection designed for
+          purposeful living, quiet confidence, and enduring elegance.
         </p>
 
         <!-- Sub-Component: Action Buttons -->
         <div class="hero-btn-group">
           <a href="#catalog" class="btn btn-primary" id="heroShopBtn">
             Explore Collection
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
               <polyline points="12 5 19 12 12 19"></polyline>
             </svg>
@@ -143,7 +162,8 @@
       <!-- Sub-Component: Hero Imagery Flex Card -->
       <div class="hero-visual">
         <div class="hero-image-frame">
-          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80" alt="Editorial fashion portrait featuring contemporary apparel" class="hero-main-image" loading="eager">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80"
+            alt="Editorial fashion portrait featuring contemporary apparel" class="hero-main-image" loading="eager">
           <div class="hero-floating-card">
             <span class="floating-badge">Curator's Choice</span>
             <h4 class="floating-title">Pure Cashmere & Raw Wool</h4>
@@ -223,7 +243,8 @@
       <div class="empty-state" id="emptyState" style="display: none;">
         <div class="empty-icon">✧</div>
         <h3 class="empty-title">No garments match your selection</h3>
-        <p class="empty-desc">Try resetting your filters or searching for terms like "cashmere", "blazer", or "wool".</p>
+        <p class="empty-desc">Try resetting your filters or searching for terms like "cashmere", "blazer", or "wool".
+        </p>
         <button class="btn btn-primary" id="emptyResetBtn">View All Garments</button>
       </div>
 
@@ -240,7 +261,8 @@
       <!-- Left Column: Image Collage Flex Box -->
       <div class="story-visual-column">
         <div class="story-image-card">
-          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80" alt="Fabric swatch and pattern tailoring workshop" class="story-image">
+          <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=800&q=80"
+            alt="Fabric swatch and pattern tailoring workshop" class="story-image">
           <div class="story-badge">
             <span class="story-badge-year">Est. 2021</span>
             <span class="story-badge-loc">Milano & Copenhagen</span>
@@ -253,10 +275,12 @@
         <span class="section-tag">Our Atelier Philosophy</span>
         <h2 class="story-title">Crafting Longevity Over Fleeting Trends.</h2>
         <p class="story-paragraph">
-          At AURA ATELIER, we reject the disposable cycle of fast fashion. Each garment is meticulously drafted, tested across hundreds of silhouettes, and finished with artisanal techniques that withstand decades of wear.
+          At AURA ATELIER, we reject the disposable cycle of fast fashion. Each garment is meticulously drafted, tested
+          across hundreds of silhouettes, and finished with artisanal techniques that withstand decades of wear.
         </p>
         <p class="story-paragraph">
-          We source solely from family-run mills in Northern Italy and certified cruelty-free organic farms. Every seam, double-fold hem, and custom horn button exists to elevate your daily ritual.
+          We source solely from family-run mills in Northern Italy and certified cruelty-free organic farms. Every seam,
+          double-fold hem, and custom horn button exists to elevate your daily ritual.
         </p>
 
         <!-- Feature List (Mapped dynamically from STORY_FEATURES in constant.js) -->
@@ -296,10 +320,12 @@
       <div class="newsletter-content">
         <span class="newsletter-tag">Private Club</span>
         <h2 class="newsletter-title">Receive Curated Editions & Private Invitations</h2>
-        <p class="newsletter-desc">Subscribe to receive early access to limited capsule releases, private sales, and seasonal lookbooks.</p>
-        
+        <p class="newsletter-desc">Subscribe to receive early access to limited capsule releases, private sales, and
+          seasonal lookbooks.</p>
+
         <form class="newsletter-form" id="newsletterForm" onsubmit="return false;">
-          <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your personal email address..." required>
+          <input type="email" id="newsletterEmail" class="newsletter-input"
+            placeholder="Enter your personal email address..." required>
           <button type="submit" class="btn btn-primary newsletter-submit-btn">Subscribe</button>
         </form>
         <span class="newsletter-privacy">We respect your discretion. Unsubscribe with one click anytime.</span>
@@ -321,7 +347,8 @@
           <span class="logo-text">AURA <span class="logo-subtext">ATELIER</span></span>
         </a>
         <p class="footer-bio">
-          Contemporary silhouettes engineered with architectural precision, noble natural fibers, and mindful craftsmanship.
+          Contemporary silhouettes engineered with architectural precision, noble natural fibers, and mindful
+          craftsmanship.
         </p>
         <div class="footer-social-links" id="footerSocialLinks">
           <!-- Dynamically generated via FOOTER_SOCIAL_LINKS.map() -->
@@ -377,7 +404,7 @@
   <!-- Component: Slide-out Shopping Bag Drawer with Flexbox structure -->
   <div class="cart-drawer-overlay" id="cartOverlay">
     <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
-      
+
       <!-- Cart Header (Flex Row) -->
       <div class="cart-header">
         <div class="cart-header-title">
@@ -434,6 +461,9 @@
   <div class="toast-container" id="toastContainer" aria-live="polite"></div>
   <!-- ================= END TOAST NOTIFICATIONS ================= -->
 
+
+  <!-- Products Catalog Data -->
+  <script src="js/products.js"></script>
 
   <!-- Constants & Data Arrays Configuration -->
   <script src="js/constant.js"></script>
