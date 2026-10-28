@@ -25,8 +25,6 @@ const AppState = {
   selectedQuickProduct: null
 };
 
-// Products catalog is now defined and loaded from js/products.js (PRODUCTS array)
-
 
 // ==========================================================================
 // 2. DOM ELEMENT REFERENCES
@@ -258,7 +256,6 @@ function initCopyrightYear() {
  * Loads product catalog from products.js (with JSON fetch support if served via HTTP)
  */
 async function loadProductsData() {
-  // If PRODUCTS array is loaded from products.js, use it directly (works everywhere, including file:// with zero CORS errors)
   if (typeof PRODUCTS !== 'undefined' && Array.isArray(PRODUCTS) && PRODUCTS.length > 0) {
     AppState.products = [...PRODUCTS];
     applyFiltersAndSort();
@@ -267,7 +264,7 @@ async function loadProductsData() {
 
   // Fallback to fetch data/products.json if served over HTTP/HTTPS
   try {
-    const response = await fetch('data/products.json');
+    const response = await fetch('/cloth-openapp/data/products.json');
     if (!response.ok) {
       throw new Error(`HTTP Error: ${response.status}`);
     }
