@@ -631,12 +631,10 @@ function openQuickView(productId) {
   const hasDiscount = product.originalPrice && product.originalPrice > product.price;
 
   DOM.modalProductDetails.innerHTML = `
-  < !--Modal Media Column(Flex Child)-- >
     <div class="modal-media-col">
       <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="modal-img">
     </div>
 
-    <!--Modal Information Column(Flex Child)-- >
   <div class="modal-info-col">
     <span class="modal-category">${product.category} • ${product.gender || 'unisex'}</span>
     <h2 class="modal-title">${product.name}</h2>
@@ -648,7 +646,6 @@ function openQuickView(productId) {
 
     <p class="modal-desc">${product.description}</p>
 
-    <!-- Size Selector -->
     ${product.sizes && product.sizes.length > 0 ? `
         <div class="modal-size-selector">
           <span class="size-selector-label">Select Size:</span>
@@ -660,7 +657,6 @@ function openQuickView(productId) {
         </div>
       ` : ''}
 
-    <!-- Modal Action Buttons (Flex Row) -->
     <button class="btn btn-primary" id="modalAddToCartBtn" style="margin-top: 10px;">
       Add to Shopping Bag • $${product.price.toFixed(2)}
     </button>
