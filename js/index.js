@@ -390,7 +390,7 @@ function renderProductCards(products) {
 
     <!-- Media Container -->
     <div class="product-image-box">
-      <img src="${'/cloth-openapp/' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
+      <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
 
         ${badgeHtml}
 
