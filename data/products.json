@@ -46,7 +46,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/himachali-dress.png",
     "inStock": true,
     "featured": true,
     "material": "Cotton",
@@ -78,7 +78,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/men-white-kurta.png",
     "inStock": true,
     "featured": false,
     "material": "Cotton",
@@ -110,7 +110,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/men-red-kurta.png",
     "inStock": true,
     "featured": false,
     "material": "Cotton",
@@ -142,7 +142,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/slik-pink-dress.png",
     "inStock": true,
     "featured": false,
     "material": "Silk",
@@ -174,7 +174,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-woman-dress.png",
     "inStock": true,
     "featured": false,
     "material": "Cotton",
@@ -206,7 +206,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-one.png",
     "inStock": true,
     "featured": false,
     "material": "Velvet",
@@ -238,7 +238,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-two.png",
     "inStock": true,
     "featured": false,
     "material": "Velvet",
@@ -270,7 +270,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-three.png",
     "inStock": true,
     "featured": false,
     "material": "Velvet",
@@ -302,7 +302,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-four.png",
     "inStock": true,
     "featured": false,
     "material": "Velvet",
@@ -334,7 +334,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-five.png",
     "inStock": true,
     "featured": false,
     "material": "Velvet",
@@ -366,39 +366,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
-    "inStock": true,
-    "featured": false,
-    "material": "Velvet",
-    "type": "Meditation dress",
-    "pattern": "Angrakha style",
-    "length": "Full",
-    "productLength": 58,
-    "productUnit": "cm",
-    "brand": "Sukoon",
-    "netQuantity": 1,
-    "genericName": "Robe",
-    "countryOfOrigin": "India",
-    "netWeight": 100
-  },
-  {
-    "id": "prod-013",
-    "name": "Maroon Velvet Angrakha Meditation Robe",
-    "category": "meditation-wear",
-    "gender": "women",
-    "price": null,
-    "originalPrice": null,
-    "rating": null,
-    "reviewsCount": 0,
-    "badge": null,
-    "description": "Full-length maroon velvet meditation robe featuring an Angrakha-style design.",
-    "colors": [
-      "#800000"
-    ],
-    "sizes": [
-      "One Size"
-    ],
-    "image": "",
+    "image": "/red-dress-six.png",
     "inStock": true,
     "featured": false,
     "material": "Velvet",
@@ -430,7 +398,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-seven.png",
     "inStock": true,
     "featured": false,
     "material": "Leazy bussy",
@@ -462,7 +430,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-eight.png",
     "inStock": true,
     "featured": false,
     "material": "Leazy bussy",
@@ -494,7 +462,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-nine.png",
     "inStock": true,
     "featured": false,
     "material": "Leazy bussy",
@@ -526,7 +494,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-ten.png",
     "inStock": true,
     "featured": false,
     "material": "Leazy bussy",
@@ -558,39 +526,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
-    "inStock": true,
-    "featured": false,
-    "material": "Leazy bussy",
-    "type": "Meditation dress",
-    "pattern": "Layered style",
-    "length": "Full",
-    "productLength": 58,
-    "productUnit": "cm",
-    "brand": "Sukoon",
-    "netQuantity": 1,
-    "genericName": "Robe",
-    "countryOfOrigin": "India",
-    "netWeight": 200
-  },
-  {
-    "id": "prod-019",
-    "name": "White Layered Meditation Robe for Women",
-    "category": "meditation-wear",
-    "gender": "women",
-    "price": 999,
-    "originalPrice": null,
-    "rating": null,
-    "reviewsCount": 0,
-    "badge": null,
-    "description": "Full-length white meditation robe made from lightweight fabric, featuring a layered design for a flowing silhouette.",
-    "colors": [
-      "#FFFFFF"
-    ],
-    "sizes": [
-      "One Size"
-    ],
-    "image": "",
+    "image": "/red-dress-eleven.png",
     "inStock": true,
     "featured": false,
     "material": "Leazy bussy",
@@ -622,7 +558,7 @@
     "sizes": [
       "One Size"
     ],
-    "image": "",
+    "image": "/red-dress-twelve.png",
     "inStock": true,
     "featured": false,
     "material": "Ruby",
