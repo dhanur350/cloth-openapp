@@ -392,7 +392,7 @@ function renderProductCards(products) {
       <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
 
         ${badgeHtml}
-        <!-- <div class="product-actions-overlay">
+        <div class="product-actions-overlay">
           <button class="product-quick-btn" data-action="quick-view" data-id="${product.id}">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -400,7 +400,7 @@ function renderProductCards(products) {
             </svg>
             Quick View
           </button>
-          <button class="product-wish-btn ${isWishlisted ? 'active' : ''}" data-action="toggle-wishlist" data-id="${product.id}" title="Save to Wishlist">
+          <!-- <button class="product-wish-btn ${isWishlisted ? 'active' : ''}" data-action="toggle-wishlist" data-id="${product.id}" title="Save to Wishlist">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="${isWishlisted ? 'currentColor' : 'none'}" stroke="currentColor" stroke-width="2">
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
@@ -655,7 +655,7 @@ function openQuickView(productId) {
       ` : ''}
 
     <button class="btn btn-primary" id="modalAddToCartBtn" style="margin-top: 10px;">
-      Add to Shopping Bag • $${product.price.toFixed(2)}
+      Buy Now  • $${product.price.toFixed(2)}
     </button>
   </div>
 `;
@@ -670,13 +670,12 @@ function openQuickView(productId) {
     });
   });
 
-  // Attach Add to Cart listener inside modal
+  // Attach Buy Now / WhatsApp order listener inside modal (mapped to #modalAddToCartBtn)
   const addBtn = DOM.modalProductDetails.querySelector('#modalAddToCartBtn');
   if (addBtn) {
     addBtn.addEventListener('click', () => {
-      addToCart(product.id, activeSize);
+      triggerWhatsAppMessage(product, activeSize);
       closeQuickView();
-      openCartDrawer();
     });
   }
 
@@ -686,6 +685,57 @@ function openQuickView(productId) {
     DOM.quickViewModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
+}
+
+/**
+ * Original handler to add modal product to cart and open cart drawer
+ * (Preserved so existing cart functionality remains available)
+ * @param {Object} product - Product details
+ * @param {string} [activeSize] - Selected size
+ */
+function handleModalAddToCart(product, activeSize) {
+  if (!product) return;
+  addToCart(product.id, activeSize);
+  closeQuickView();
+  openCartDrawer();
+}
+
+/**
+ * Triggers a WhatsApp API message link from mobile or desktop
+ * Connects to https://wa.me/+916230462263 with pre-filled message text
+ * @param {Object|string} [productOrText] - Product object or custom text string
+ * @param {string} [size='Standard'] - Selected product size
+ * @param {string} [customText=''] - Optional custom message text
+ * @returns {string} The full WhatsApp URL
+ */
+function triggerWhatsAppMessage(productOrText, size = 'Standard', customText = '') {
+  const phoneNumber = '+916230462263';
+  let message = '';
+
+  if (typeof productOrText === 'string' && productOrText.trim()) {
+    message = productOrText.trim();
+  } else if (customText && customText.trim()) {
+    message = customText.trim();
+  } else if (productOrText && typeof productOrText === 'object' && productOrText.name) {
+    const sizeText = size ? ` (Size: ${size})` : '';
+    const priceText = productOrText.price ? ` - $${productOrText.price.toFixed(2)}` : 'Price is not given in website';
+    message = `Hello I would like more information about ${productOrText.name}${sizeText || 'Size not availabe on website'}${priceText || 'Price is not given in website'}`;
+  } else {
+    message = 'Hello I would like more information';
+  }
+
+  const encodedText = encodeURIComponent(message);
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedText}`;
+
+  // On mobile browsers, directly trigger WhatsApp application via location.href; on desktop, open in a new tab
+  const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile) {
+    window.location.href = whatsappUrl;
+  } else {
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  }
+
+  return whatsappUrl;
 }
 
 /**
