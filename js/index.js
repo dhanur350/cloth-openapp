@@ -270,7 +270,7 @@ async function loadProductsData() {
     }
     const data = await response.json();
     console.log('Fetched products from data/products.json:', data);
-    AppState.products = Array.isArray(data) && data.length > 0 ? data : [];
+    AppState.products = data;
   } catch (error) {
     console.warn('Could not fetch data/products.json. Ensure js/products.js is loaded.', error);
     AppState.products = [];
@@ -416,7 +416,7 @@ function renderProductCards(products) {
         <span class="product-category">${product.category}</span>
         <div class="product-rating">
           <span class="rating-star">★</span>
-          <span>${product.rating.toFixed(1)}</span>
+          <span>${product?.rating?.toFixed(1) || '0'}</span>
         </div>
       </div>
 
@@ -426,7 +426,7 @@ function renderProductCards(products) {
 
       <div class="product-footer">
         <div class="price-box">
-          <span class="current-price">₹${product.price.toFixed(2)}</span>
+          <span class="current-price">₹${product?.price?.toFixed(2) || '0.00'}</span>
           ${originalPriceHtml}
         </div>
 
