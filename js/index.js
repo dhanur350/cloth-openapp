@@ -633,7 +633,7 @@ function openQuickView(productId) {
   DOM.modalProductDetails.innerHTML = `
   < !--Modal Media Column(Flex Child)-- >
     <div class="modal-media-col">
-      <img src="${product.image}" alt="${product.name}" class="modal-img">
+      <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="modal-img">
     </div>
 
     <!--Modal Information Column(Flex Child)-- >
