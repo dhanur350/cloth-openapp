@@ -392,7 +392,7 @@ function renderProductCards(products) {
       <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
 
         ${badgeHtml}
-        <div class="product-actions-overlay">
+        <!-- <div class="product-actions-overlay">
           <button class="product-quick-btn" data-action="quick-view" data-id="${product.id}">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
@@ -405,7 +405,7 @@ function renderProductCards(products) {
               <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
             </svg>
           </button>
-        </div>
+        </div> -->
     </div>
 
     <div class="product-info">
@@ -527,7 +527,7 @@ function updateCartUI() {
 
   if (AppState.cart.length === 0) {
     DOM.cartItemsList.innerHTML = `
-  < div class="cart-empty-message" >
+  <div class="cart-empty-message">
         <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -536,7 +536,7 @@ function updateCartUI() {
         <button class="btn btn-primary" onclick="closeCartDrawer(); window.location.hash = '#catalog';">
           Discover Collection
         </button>
-      </div >
+      </div>
   `;
     return;
   }
@@ -711,7 +711,7 @@ function showToast(message) {
   const toast = document.createElement('div');
   toast.className = 'toast';
   toast.innerHTML = `
-  < span class="toast-icon" >✧</span >
+    <span class="toast-icon">✧</span>
     <span>${message}</span>
 `;
 
