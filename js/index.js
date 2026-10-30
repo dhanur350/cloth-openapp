@@ -388,13 +388,10 @@ function renderProductCards(products) {
     return `
   <article class="product-card" data-product-id="${product.id}">
 
-    <!-- Media Container -->
     <div class="product-image-box">
       <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
 
         ${badgeHtml}
-
-        <!-- Floating Actions Overlay (Quick View & Wishlist) -->
         <div class="product-actions-overlay">
           <button class="product-quick-btn" data-action="quick-view" data-id="${product.id}">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -430,12 +427,12 @@ function renderProductCards(products) {
           ${originalPriceHtml}
         </div>
 
-        <button class="add-cart-icon-btn" data-action="add-to-cart" data-id="${product.id}" title="Add to Bag">
+        <!-- <button class="add-cart-icon-btn" data-action="add-to-cart" data-id="${product.id}" title="Add to Bag">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
-        </button>
+        </button> -->
       </div>
     </div>
 
