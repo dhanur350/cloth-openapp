@@ -637,8 +637,8 @@ function openQuickView(productId) {
     <h2 class="modal-title">${product.name}</h2>
 
     <div class="modal-price-row">
-      <span class="modal-current-price">$${product.price.toFixed(2)}</span>
-      ${hasDiscount ? `<span class="modal-original-price">$${product.originalPrice.toFixed(2)}</span>` : ''}
+      <span class="modal-current-price">₹${product.price.toFixed(2)}</span>
+      ${hasDiscount ? `<span class="modal-original-price">₹${product.originalPrice.toFixed(2)}</span>` : ''}
     </div>
 
     <p class="modal-desc">${product.description}</p>
