@@ -105,23 +105,23 @@ const TESTIMONIALS = [
   {
     stars: '★★★★★',
     quote: '"The cashmere coat drape is unmatched. The structure of the lapel and the softness of the fabric feels even better than my heritage couture coats."',
-    initials: 'EG',
-    author: 'Eleanor G.',
-    role: 'Architect & Designer, Zurich'
+    initials: 'SA',
+    author: 'Sakshi',
+    role: 'Customer'
   },
   {
     stars: '★★★★★',
-    quote: '"Finding menswear trousers that combine high-grade Italian wool with a relaxed silhouette used to be impossible. AURA has set an entirely new standard."',
-    initials: 'MT',
-    author: 'Marcus T.',
-    role: 'Creative Director, London'
+    quote: '"Finding menswear trousers that combine high-grade wool with a relaxed silhouette used to be impossible. AURA has set an entirely new standard."',
+    initials: 'RA',
+    author: 'Rohan',
+    role: 'Cloth Shop Owner and Customer'
   },
   {
     stars: '★★★★★',
     quote: '"The mulberry silk slip dress is heaven on skin. Wore it to a gallery opening in Paris and received non-stop compliments. Worth every single cent."',
-    initials: 'CL',
-    author: 'Camille L.',
-    role: 'Curator, Paris'
+    initials: 'VK',
+    author: 'Vikram',
+    role: 'Customer'
   }
 ];
 
