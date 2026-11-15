@@ -40,7 +40,7 @@ const VALUE_PROPOSITIONS = [
       <circle cx="18.5" cy="18.5" r="2.5"></circle>
     </svg>`,
     title: 'Complimentary Shipping',
-    desc: 'Carbon-neutral delivery across 80+ countries worldwide.'
+    desc: 'Carbon-neutral delivery across Distt Kangra, Himachal Pradesh.'
   },
   {
     iconSvg: `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

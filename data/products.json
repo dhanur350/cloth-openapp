@@ -15,7 +15,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/baby-girl.png",
     "inStock": true,
@@ -45,7 +49,11 @@
     "description": "Traditional full-length Himachali dress for women, made from cotton. Designed in a traditional Himachali dress style with a one-size fit.",
     "colors": [],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/himachali-dress.png",
     "inStock": true,
@@ -78,7 +86,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/men-white-kurta.png",
     "inStock": true,
@@ -111,7 +123,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/men-red-kurta.png",
     "inStock": true,
@@ -144,7 +160,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/slik-pink-dress.png",
     "inStock": true,
@@ -177,7 +197,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-woman-dress.png",
     "inStock": true,
@@ -210,7 +234,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-one.png",
     "inStock": true,
@@ -242,7 +270,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-two.png",
     "inStock": true,
@@ -275,7 +307,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-three.png",
     "inStock": true,
@@ -308,7 +344,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-four.png",
     "inStock": true,
@@ -341,7 +381,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-five.png",
     "inStock": true,
@@ -374,7 +418,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-six.png",
     "inStock": true,
@@ -407,7 +455,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-seven.png",
     "inStock": true,
@@ -440,7 +492,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-eight.png",
     "inStock": true,
@@ -473,7 +529,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-nine.png",
     "inStock": true,
@@ -506,7 +566,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-ten.png",
     "inStock": true,
@@ -539,7 +603,11 @@
       "#800000"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-eleven.png",
     "inStock": true,
@@ -572,7 +640,11 @@
       "#FFFFFF"
     ],
     "sizes": [
-      "One Size"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "Custom Size"
     ],
     "image": "/red-dress-twelve.png",
     "inStock": true,

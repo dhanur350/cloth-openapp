@@ -645,7 +645,7 @@ function openQuickView(productId) {
 
     ${product.sizes && product.sizes.length > 0 ? `
         <div class="modal-size-selector">
-          <span class="size-selector-label">Select Size:</span>
+          <span class="size-selector-label">Available in all sizes:</span>
           <div class="size-pill-row" id="modalSizePills">
             ${product.sizes.map((size, idx) => `
               <button class="size-pill ${idx === 0 ? 'active' : ''}" data-size="${size}">${size}</button>
@@ -655,7 +655,7 @@ function openQuickView(productId) {
       ` : ''}
 
     <button class="btn btn-primary" id="modalAddToCartBtn" style="margin-top: 10px;">
-      Buy Now  • $${product.price.toFixed(2)}
+      Buy Now  • ₹${product.price.toFixed(2)}
     </button>
   </div>
 `;
