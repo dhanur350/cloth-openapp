@@ -718,7 +718,7 @@ function triggerWhatsAppMessage(productOrText, size = 'Standard', customText = '
     message = customText.trim();
   } else if (productOrText && typeof productOrText === 'object' && productOrText.name) {
     const sizeText = size ? ` (Size: ${size})` : '';
-    const priceText = productOrText.price ? ` - $${productOrText.price.toFixed(2)}` : 'Price is not given in website';
+    const priceText = productOrText.price ? ` - ₹${productOrText.price.toFixed(2)}` : 'Price is not given in website';
     message = `Hello I would like more information about ${productOrText.name}${sizeText || 'Size not availabe on website'}${priceText || 'Price is not given in website'}`;
   } else {
     message = 'Hello I would like more information';
