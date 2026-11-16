@@ -74,7 +74,7 @@
   },
   {
     "id": "prod-003",
-    "name": "White Cotton Meditation Robe for Men",
+    "name": "White Cotton Meditation for Men",
     "category": "meditation-wear",
     "gender": "men",
     "price": 1200,
@@ -112,11 +112,11 @@
   },
   {
     "id": "prod-004",
-    "name": "Maroon Cotton Meditation Robe for Men",
+    "name": "Maroon Cotton Meditation for Men",
     "category": "meditation-wear",
     "gender": "men",
     "price": 1200,
-    "originalPrice": 1400,
+    "originalPrice": 2000,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
