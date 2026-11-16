@@ -364,7 +364,10 @@ function renderProductCards(products) {
 
   DOM.productsFlexContainer.innerHTML = products.map(product => {
     const isWishlisted = AppState.wishlist.has(product.id);
-    const hasDiscount = product.originalPrice && product.originalPrice > product.price;
+    const activePrice = (product.discountPrice !== undefined && product.discountPrice !== null)
+      ? product.discountPrice
+      : product.price;
+    const hasDiscount = product.originalPrice && product.originalPrice > activePrice;
 
     // Color Swatches HTML
     const swatchesHtml = product.colors && product.colors.length > 0
@@ -378,11 +381,11 @@ function renderProductCards(products) {
       ? `<div class="product-badge-strip">
           <span class="product-badge ${hasDiscount ? 'sale' : ''}">${product.badge}</span>
         </div>`
-      : '';
+      : (hasDiscount ? `<div class="product-badge-strip"><span class="product-badge sale">Sale</span></div>` : '');
 
     // Original Price HTML
     const originalPriceHtml = hasDiscount
-      ? `<span class="original-price">₹${product.originalPrice.toFixed(2)}</span > `
+      ? `<span class="original-price cut-ribbon">₹${product.originalPrice.toFixed(2)}</span>`
       : '';
 
     return `
@@ -625,11 +628,20 @@ function openQuickView(productId) {
   AppState.selectedQuickProduct = product;
   let activeSize = product.sizes && product.sizes.length > 0 ? product.sizes[0] : 'Standard';
 
-  const hasDiscount = product.originalPrice && product.originalPrice > product.price;
+  const discountPrice = (product.discountPrice !== undefined && product.discountPrice !== null)
+    ? product.discountPrice
+    : product.price;
+  const originalPrice = product.originalPrice;
+  const hasDiscount = originalPrice && discountPrice && originalPrice > discountPrice;
+  const savings = hasDiscount ? (originalPrice - discountPrice) : 0;
+  const discountPercent = hasDiscount ? Math.round(((originalPrice - discountPrice) / originalPrice) * 100) : 0;
 
   DOM.modalProductDetails.innerHTML = `
     <div class="modal-media-col">
       <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="modal-img">
+      ${hasDiscount ? `
+        <span class="modal-image-ribbon">₹${savings.toFixed(0)} OFF</span>
+      ` : ''}
     </div>
 
   <div class="modal-info-col">
@@ -637,8 +649,13 @@ function openQuickView(productId) {
     <h2 class="modal-title">${product.name}</h2>
 
     <div class="modal-price-row">
-      <span class="modal-current-price">₹${product.price.toFixed(2)}</span>
-      ${hasDiscount ? `<span class="modal-original-price">₹${product.originalPrice.toFixed(2)}</span>` : ''}
+      ${hasDiscount ? `
+        <span class="modal-original-price cut-ribbon" title="Original Price">₹${originalPrice.toFixed(2)}</span>
+        <span class="modal-discount-price" title="Discounted Price">₹${discountPrice.toFixed(2)}</span>
+        <span class="modal-discount-ribbon">Save ₹${savings.toFixed(0)} (${discountPercent}% OFF)</span>
+      ` : `
+        <span class="modal-current-price">₹${discountPrice ? discountPrice.toFixed(2) : '0.00'}</span>
+      `}
     </div>
 
     <p class="modal-desc">${product.description}</p>
@@ -655,7 +672,7 @@ function openQuickView(productId) {
       ` : ''}
 
     <button class="btn btn-primary" id="modalAddToCartBtn" style="margin-top: 10px;">
-      Buy Now  • ₹${product.price.toFixed(2)}
+      Buy Now  • ₹${discountPrice ? discountPrice.toFixed(2) : '0.00'}
     </button>
   </div>
 `;

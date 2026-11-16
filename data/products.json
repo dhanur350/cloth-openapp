@@ -5,7 +5,7 @@
     "category": "dresses",
     "gender": "girls",
     "price": 850,
-    "originalPrice": null,
+    "originalPrice": 1050,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -34,7 +34,8 @@
     "netQuantity": 1,
     "genericName": "Frock",
     "countryOfOrigin": "India",
-    "netWeight": 50
+    "netWeight": 50,
+    "discountPrice": 850
   },
   {
     "id": "prod-002",
@@ -42,7 +43,7 @@
     "category": "traditional-wear",
     "gender": "women",
     "price": 6599,
-    "originalPrice": null,
+    "originalPrice": 6799,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -68,7 +69,8 @@
     "netQuantity": 1,
     "genericName": "Himachali dress",
     "countryOfOrigin": "India",
-    "netWeight": 500
+    "netWeight": 500,
+    "discountPrice": 6599
   },
   {
     "id": "prod-003",
@@ -76,7 +78,7 @@
     "category": "meditation-wear",
     "gender": "men",
     "price": 1200,
-    "originalPrice": null,
+    "originalPrice": 1400,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -105,7 +107,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 150
+    "netWeight": 150,
+    "discountPrice": 1200
   },
   {
     "id": "prod-004",
@@ -113,7 +116,7 @@
     "category": "meditation-wear",
     "gender": "men",
     "price": 1200,
-    "originalPrice": null,
+    "originalPrice": 1400,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -142,7 +145,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 150
+    "netWeight": 150,
+    "discountPrice": 1200
   },
   {
     "id": "prod-005",
@@ -150,7 +154,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 999,
-    "originalPrice": null,
+    "originalPrice": 1199,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -179,7 +183,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 100
+    "netWeight": 100,
+    "discountPrice": 999
   },
   {
     "id": "prod-006",
@@ -187,7 +192,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 899,
-    "originalPrice": null,
+    "originalPrice": 1099,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -216,7 +221,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 150
+    "netWeight": 150,
+    "discountPrice": 899
   },
   {
     "id": "prod-007",
@@ -253,7 +259,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 200
+    "netWeight": 200,
+    "discountPrice": null
   },
   {
     "id": "prod-008",
@@ -289,7 +296,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 100
+    "netWeight": 100,
+    "discountPrice": null
   },
   {
     "id": "prod-009",
@@ -326,7 +334,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 100
+    "netWeight": 100,
+    "discountPrice": null
   },
   {
     "id": "prod-010",
@@ -363,7 +372,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 100
+    "netWeight": 100,
+    "discountPrice": null
   },
   {
     "id": "prod-011",
@@ -400,7 +410,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 100
+    "netWeight": 100,
+    "discountPrice": null
   },
   {
     "id": "prod-012",
@@ -437,7 +448,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 100
+    "netWeight": 100,
+    "discountPrice": null
   },
   {
     "id": "prod-014",
@@ -445,7 +457,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 999,
-    "originalPrice": null,
+    "originalPrice": 1199,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -474,7 +486,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 200
+    "netWeight": 200,
+    "discountPrice": 999
   },
   {
     "id": "prod-015",
@@ -482,7 +495,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 999,
-    "originalPrice": null,
+    "originalPrice": 1199,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -511,7 +524,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 200
+    "netWeight": 200,
+    "discountPrice": 999
   },
   {
     "id": "prod-016",
@@ -519,7 +533,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 999,
-    "originalPrice": null,
+    "originalPrice": 1199,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -548,7 +562,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 200
+    "netWeight": 200,
+    "discountPrice": 999
   },
   {
     "id": "prod-017",
@@ -556,7 +571,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 999,
-    "originalPrice": null,
+    "originalPrice": 1199,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -585,7 +600,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 200
+    "netWeight": 200,
+    "discountPrice": 999
   },
   {
     "id": "prod-018",
@@ -593,7 +609,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 999,
-    "originalPrice": null,
+    "originalPrice": 1199,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -622,7 +638,8 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 200
+    "netWeight": 200,
+    "discountPrice": 999
   },
   {
     "id": "prod-020",
@@ -630,7 +647,7 @@
     "category": "meditation-wear",
     "gender": "women",
     "price": 799,
-    "originalPrice": null,
+    "originalPrice": 999,
     "rating": null,
     "reviewsCount": 0,
     "badge": null,
@@ -659,6 +676,7 @@
     "netQuantity": 1,
     "genericName": "Robe",
     "countryOfOrigin": "India",
-    "netWeight": 120
+    "netWeight": 120,
+    "discountPrice": 799
   }
 ]
