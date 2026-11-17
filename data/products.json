@@ -75,7 +75,7 @@
     "discountPrice": 1999
   },
   {
-    "id": "prod-002",
+    "id": "prod-003",
     "name": "Traditional Himachali Dress for Women",
     "category": "traditional-wear",
     "gender": "women",
@@ -110,7 +110,7 @@
     "discountPrice": 6599
   },
   {
-    "id": "prod-003",
+    "id": "prod-004",
     "name": "Maroon Women's Kimono Style Article",
     "category": "robes",
     "gender": "women",
@@ -147,7 +147,7 @@
     "discountPrice": 1999
   },
   {
-    "id": "prod-003",
+    "id": "prod-005",
     "name": "White Cotton Meditation for Men",
     "category": "meditation-wear",
     "gender": "men",
@@ -185,7 +185,7 @@
     "discountPrice": 1200
   },
   {
-    "id": "prod-004",
+    "id": "prod-006",
     "name": "Maroon Women's Anarkali Style Article",
     "category": "robes",
     "gender": "women",
@@ -222,7 +222,7 @@
     "discountPrice": 600
   },
   {
-    "id": "prod-004",
+    "id": "prod-007",
     "name": "Maroon Cotton Meditation for Men",
     "category": "meditation-wear",
     "gender": "men",
@@ -260,7 +260,7 @@
     "discountPrice": 1200
   },
   {
-    "id": "prod-005",
+    "id": "prod-008",
     "name": "Maroon Women's Anarkali Style Cotton Article",
     "category": "robes",
     "gender": "women",
@@ -297,7 +297,7 @@
     "discountPrice": 850
   },
   {
-    "id": "prod-005",
+    "id": "prod-009",
     "name": "Maroon Silk Kaftan Meditation Dress",
     "category": "meditation-wear",
     "gender": "women",
@@ -335,7 +335,7 @@
     "discountPrice": 999
   },
   {
-    "id": "prod-006",
+    "id": "prod-010",
     "name": "Maroon Women's Corset",
     "category": "corsets",
     "gender": "women",
@@ -372,7 +372,7 @@
     "discountPrice": 1500
   },
   {
-    "id": "prod-006",
+    "id": "prod-011",
     "name": "Maroon Cotton Wrinkle-Style Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -410,7 +410,7 @@
     "discountPrice": 899
   },
   {
-    "id": "prod-007",
+    "id": "prod-012",
     "name": "Maroon Women's Kurti Style Article",
     "category": "robes",
     "gender": "women",
@@ -447,7 +447,7 @@
     "discountPrice": 1000
   },
   {
-    "id": "prod-007",
+    "id": "prod-013",
     "name": "Maroon Velvet Angrakha Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -485,7 +485,7 @@
     "discountPrice": null
   },
   {
-    "id": "prod-008",
+    "id": "prod-014",
     "name": "Maroon Women's Full Sleeve Article",
     "category": "robes",
     "gender": "women",
@@ -522,7 +522,7 @@
     "discountPrice": 1500
   },
   {
-    "id": "prod-008",
+    "id": "prod-015",
     "name": "Maroon Velvet Angrakha Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -559,7 +559,7 @@
     "discountPrice": null
   },
   {
-    "id": "prod-009",
+    "id": "prod-016",
     "name": "Maroon Velvet Angrakha Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -597,7 +597,7 @@
     "discountPrice": null
   },
   {
-    "id": "prod-010",
+    "id": "prod-017",
     "name": "Maroon Velvet Angrakha Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -635,7 +635,7 @@
     "discountPrice": null
   },
   {
-    "id": "prod-011",
+    "id": "prod-018",
     "name": "Maroon Velvet Angrakha Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -673,7 +673,7 @@
     "discountPrice": null
   },
   {
-    "id": "prod-012",
+    "id": "prod-019",
     "name": "Maroon Velvet Angrakha Meditation Robe",
     "category": "meditation-wear",
     "gender": "women",
@@ -711,7 +711,7 @@
     "discountPrice": null
   },
   {
-    "id": "prod-014",
+    "id": "prod-020",
     "name": "White Layered Meditation Robe for Women",
     "category": "meditation-wear",
     "gender": "women",
@@ -749,7 +749,7 @@
     "discountPrice": 999
   },
   {
-    "id": "prod-015",
+    "id": "prod-021",
     "name": "White Layered Meditation Robe for Women",
     "category": "meditation-wear",
     "gender": "women",
@@ -787,7 +787,7 @@
     "discountPrice": 999
   },
   {
-    "id": "prod-016",
+    "id": "prod-022",
     "name": "White Layered Meditation Robe for Women",
     "category": "meditation-wear",
     "gender": "women",
@@ -825,7 +825,7 @@
     "discountPrice": 999
   },
   {
-    "id": "prod-017",
+    "id": "prod-023",
     "name": "White Layered Meditation Robe for Women",
     "category": "meditation-wear",
     "gender": "women",
@@ -863,7 +863,7 @@
     "discountPrice": 999
   },
   {
-    "id": "prod-018",
+    "id": "prod-024",
     "name": "White Layered Meditation Robe for Women",
     "category": "meditation-wear",
     "gender": "women",
@@ -901,7 +901,7 @@
     "discountPrice": 999
   },
   {
-    "id": "prod-020",
+    "id": "prod-025",
     "name": "Maroon Ruby Meditation Kurti Robe",
     "category": "meditation-wear",
     "gender": "women",
