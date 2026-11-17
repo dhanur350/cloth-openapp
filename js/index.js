@@ -638,7 +638,7 @@ function openQuickView(productId) {
 
   DOM.modalProductDetails.innerHTML = `
     <div class="modal-media-col">
-      <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="modal-img">
+      <img src="${'/assets' + product.image}" alt="${product.name}" class="modal-img">
       ${hasDiscount ? `
         <span class="modal-image-ribbon">₹${savings.toFixed(0)} OFF</span>
       ` : ''}
