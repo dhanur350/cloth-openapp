@@ -392,7 +392,7 @@ function renderProductCards(products) {
   <article class="product-card" data-product-id="${product.id}">
 
     <div class="product-image-box">
-      <img src="${'/cloth-openapp/assets' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
+      <img src="${'/assets' + product.image}" alt="${product.name}" class="product-image" loading="lazy">
 
         ${badgeHtml}
         <div class="product-actions-overlay">
